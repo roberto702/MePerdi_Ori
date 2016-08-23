@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 //        Button btn_ingresar = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) { Intent intent = new Intent (v.getContext(), PedirDatosActivity.class); startActivityForResult(intent, 0);
+            @Override public void onClick(View v) { Intent intent = new Intent (v.getContext(), MisPublicacionesActivity.class); startActivityForResult(intent, 0);
             } });
 
         mLoginFormView = findViewById(R.id.login_form);

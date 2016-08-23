@@ -17,7 +17,7 @@ public class MisPublicacionesActivity extends AppCompatActivity {
 
         Button btn_publicar = (Button) findViewById(R.id.button_publicar);
         btn_publicar.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) { Intent intent = new Intent (v.getContext(), LoginActivity.class); startActivityForResult(intent, 0);
+            @Override public void onClick(View v) { Intent intent = new Intent (v.getContext(), PedirDatosActivity.class); startActivityForResult(intent, 0);
             } });
     }
 
