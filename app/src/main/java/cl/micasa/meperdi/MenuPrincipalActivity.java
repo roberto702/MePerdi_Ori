@@ -30,7 +30,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         if (ab != null) {
             // Poner ícono del drawer toggle
 //            ab.setHomeAsUpIndicator(R.drawable.drawer_toggle);
-            ab.setHomeAsUpIndicator(R.drawable.mascota1);
+            ab.setHomeAsUpIndicator(R.drawable.ic_menu_black_48dp);
             ab.setDisplayHomeAsUpEnabled(true);
         }
 

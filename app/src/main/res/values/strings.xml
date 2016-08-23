@@ -21,8 +21,8 @@
     <string name="action_carrito">Añadir al carrito</string>
 
     <string name="item_inicio">Inicio</string>
-    <string name="item_cuenta">Mi Cuenta</string>
-    <string name="item_categorias">Categorías</string>
+    <string name="item_cuenta">Mis publicaciones</string>
+    <string name="item_categorias">Noticias</string>
     <string name="item_configuracion">Configuración</string>
 
     <string name="titulo_comidas_populares">Lo más pedido</string>
