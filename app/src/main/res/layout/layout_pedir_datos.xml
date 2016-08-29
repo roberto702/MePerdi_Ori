@@ -21,14 +21,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:text="Ingresar datos"
-            android:textSize="26dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:text="@string/ingresar_datos"
+            android:textSize="26sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -143,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_nombre_mascota" />
+            android:src="@drawable/ic_cliente" />
 
         <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_nombre_mascota"
@@ -177,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_tipo_animal" />
+            android:src="@drawable/ic_cliente" />
 
         <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_tipo_animal"
@@ -211,7 +205,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_caracteristica" />
+            android:src="@drawable/ic_cliente" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/til_caracteristica"

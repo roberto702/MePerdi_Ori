@@ -1,6 +1,7 @@
 package cl.micasa.meperdi;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.util.regex.Pattern;
+import android.app.Activity;
+
 
 public class PedirDatosActivity extends AppCompatActivity {
 
@@ -34,7 +37,7 @@ public class PedirDatosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout_pedir_datos);
+        setContentView(R.layout.layout_pedir_datos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -52,9 +55,9 @@ public class PedirDatosActivity extends AppCompatActivity {
         campoNombre = (EditText) findViewById(R.id.campo_nombre);
         campoTelefono = (EditText) findViewById(R.id.campo_telefono);
         campoCorreo = (EditText) findViewById(R.id.campo_correo);
-        campoNombre_mascota = (EditText) findViewById(R.campo_nombre_mascota);
-        campoTipo_animal = (EditText) findViewById(R.campo_tipo_animal);
-        campoCaracterista = (EditText) findViewById(R.campo_caracteristica);
+        campoNombre_mascota = (EditText) findViewById(R.id.campo_nombre_mascota);
+        campoTipo_animal = (EditText) findViewById(R.id.campo_tipo_animal);
+        campoCaracterista = (EditText) findViewById(R.id.campo_caracteristica);
 
         campoNombre.addTextChangedListener(new TextWatcher() {
             @Override
@@ -182,6 +185,9 @@ public class PedirDatosActivity extends AppCompatActivity {
         });
 
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">MePerdi</string>
     <string name="title_activity_login">Login</string>
+    <string name="ingresar_datos">Ingresar Datos</string>
+
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -14,6 +16,16 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- ingreso de datos -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_nombre_mascota">Nombre Mascota</string>
+    <string name="hint_tipo_animal">Tipo Animal</string>
+    <string name="hint_caracteristica">Caracteristicas</string>
+    <string name="accion_cancelar">Cancelar</string>
+    <string name="accion_aceptar">Aceptar</string>
 
 <!-- nuevos ejemplo -->
     <string name="action_settings">Configuración</string>
