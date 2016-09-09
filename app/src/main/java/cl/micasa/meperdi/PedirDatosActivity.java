@@ -1,10 +1,8 @@
 package cl.micasa.meperdi;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -14,9 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import java.util.regex.Pattern;
-import android.app.Activity;
 
+import java.util.regex.Pattern;
 
 public class PedirDatosActivity extends AppCompatActivity {
 
@@ -40,8 +37,6 @@ public class PedirDatosActivity extends AppCompatActivity {
         setContentView(R.layout.layout_pedir_datos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setLogo(R.mipmap.ic_launcher);
 
         // Referencias TILs
         tilNombre = (TextInputLayout) findViewById(R.id.til_nombre);
@@ -185,9 +180,6 @@ public class PedirDatosActivity extends AppCompatActivity {
         });
 
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 
@@ -225,41 +217,42 @@ public class PedirDatosActivity extends AppCompatActivity {
         return true;
     }
 
-    private boolean esNombremascotaValido(String nombre_mascota) {
-        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
-        if (!patron.matcher(nombre_mascota).matches() || nombre_mascota.length() > 30) {
-            tilNombre_mascota.setError("Nombre inválido");
-            return false;
-        } else {
-            tilNombre_mascota.setError(null);
-        }
+   private boolean esNombremascotaValido(String nombre_mascota) {
+       Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+       if (!patron.matcher(nombre_mascota).matches() || nombre_mascota.length() > 30) {
+           tilNombre_mascota.setError("Nombre inválido");
+           return false;
+       } else {
+           tilNombre_mascota.setError(null);
+       }
 
-        return true;
-    }
+       return true;
+   }
 
-    private boolean esTipoMascotaValido(String tipo_animal) {
-        Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
-        if (!patron.matcher(tipo_animal).matches() || tipo_animal.length() > 30) {
-            tilTipo_animal.setError("Nombre inválido");
-            return false;
-        } else {
-            tilTipo_animal.setError(null);
-        }
+   private boolean esTipoMascotaValido(String tipo_animal) {
+       Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
+       if (!patron.matcher(tipo_animal).matches() || tipo_animal.length() > 30) {
+           tilTipo_animal.setError("Tipo Mascota inválido");
+           return false;
+       } else {
+           tilTipo_animal.setError(null);
+       }
 
-        return true;
-    }
+       return true;
+   }
 
     private boolean esCaracteristicaValido(String caracteristica) {
         Pattern patron = Pattern.compile("^[a-zA-Z ]+$");
         if (!patron.matcher(caracteristica).matches() || caracteristica.length() > 30) {
-            tilCaracteristica.setError("Nombre inválido");
+            tilCaracteristica.setError("Caracteristica inválida");
             return false;
         } else {
-            tilCaracteristica.setError(null);
+           tilCaracteristica.setError(null);
         }
 
         return true;
     }
+
 
     private void validarDatos() {
         String nombre = tilNombre.getEditText().getText().toString();
@@ -276,9 +269,12 @@ public class PedirDatosActivity extends AppCompatActivity {
         boolean e = esTipoMascotaValido(tipo_animal);
         boolean f = esCaracteristicaValido(caracteristica);
 
+        // if (a && b && c && d && e && f) {
         if (a && b && c && d && e && f) {
             // OK, se pasa a la siguiente acción
+
             Toast.makeText(this, "Se guarda el registro", Toast.LENGTH_LONG).show();
+
         }
 
     }
